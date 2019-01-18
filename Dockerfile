@@ -9,8 +9,5 @@ RUN apt-get install -y git-core --no-install-recommends && rm -rf /var/lib/apt/l
 # Install pipenv
 RUN pip install pipenv
 
-# Clone ska-skeleton repo
-RUN cd /tmp && git clone https://github.com/ska-telescope/ska-skeleton.git
-
-# Install environment
-RUN cd /tmp/ska-skeleton && pipenv install
+# Create directories
+RUN cd /tmp && mkdir repo
