@@ -14,6 +14,6 @@ rm -f pipfile_deps.csv
 echo "package, version" > pipfile_deps.csv
 awk '/\[packages\]/{flag=1;next}/\[dev-packages\]/{flag=0}flag' Pipfile | awk 'NF > 0' | awk -F" = " '{print $1 ", " $2}' | sed 's/"//g' >> pipfile_deps.csv
 
-mv pipenv_graph.txt dependencies
-mv pipenv_graph.csv dependencies
-mv pipfile_deps.csv dependencies
+mv pipenv_graph.txt /tmp/dependencies
+mv pipenv_graph.csv /tmp/dependencies
+mv pipfile_deps.csv /tmp/dependencies

@@ -8,6 +8,3 @@ RUN apt-get install -y git-core --no-install-recommends && rm -rf /var/lib/apt/l
 
 # Install pipenv
 RUN pip install pipenv
-
-# Create directories
-RUN cd /tmp && mkdir repo
