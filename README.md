@@ -14,5 +14,6 @@ The base project is achieved with the following:
     - debian stable slim image
     - minimal python instalation on top of debian stable slim image
 - git tooling
+- make
 - pipenv
 

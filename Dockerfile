@@ -4,7 +4,7 @@ FROM python:3.5-slim
 
 # Install git
 RUN apt-get update
-RUN apt-get install -y git-core --no-install-recommends && rm -rf /var/lib/apt/lists/*
+RUN apt-get install -y git-core make --no-install-recommends && rm -rf /var/lib/apt/lists/*
 
 # Install pipenv
 RUN pip install pipenv
