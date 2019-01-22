@@ -1,0 +1,7 @@
+package, version
+pytest-cov, 2.6.1
+pytest-json-report, 0.7.0
+pytest-pylint, 0.14.0
+python-dotenv, 0.10.1
+sphinx-autobuild, 0.7.1
+sphinx-rtd-theme, 0.4.2
