@@ -1,4 +1,4 @@
-# ska-python-skeleton-deps
+# dependencies-manager
 Checks the minimum system and python packages dependencies for the ska-skeleton project
 
 ## Usage:
