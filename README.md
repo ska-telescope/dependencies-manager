@@ -2,7 +2,7 @@
 Checks the minimum system and python packages dependencies for the ska-skeleton project
 
 ## Usage:
-Build the docker image from scratch and get the system dependencies under `system_deps.txt` and python package dependencies under `pipenv_deps.txt`:
+Build the docker image from scratch and get the system dependencies under `dependencies/REPOSITORY_NAME`:
 ```
 > ./get-clean-deps.sh
 ```
@@ -39,4 +39,4 @@ The dependencies list extracted from running the too shall reside in `dependenci
 - `system_deps_diff.txt`: the packages installed in the OS in simplified CSV format that are not part of the *base project*
 - `pipfile_deps.csv`: the packages expressly specified to install by `pipenv` (package sub dependencies are not part of this file) in simplified CSV format
 - `pipenv_graph.txt`: the packages installed by `pipenv` including all sub dependencies
-- `pipenv_graph.csv`: the packages expressly installed by `pipenv` (package sub dependencies are not part of this file) in simplified CSV format
+- `pipenv_graph.csv`: the top level packages expressly installed by `pipenv` (package sub dependencies are not part of this file) in simplified CSV format
