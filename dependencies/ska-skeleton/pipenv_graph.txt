@@ -11,7 +11,7 @@ pytest-cov==2.6.1
     - py [required: >=1.5.0, installed: 1.7.0]
     - setuptools [required: Any, installed: 40.6.3]
     - six [required: >=1.10.0, installed: 1.12.0]
-pytest-json-report==0.7.0
+pytest-json-report==1.0.1
   - pytest [required: >=3.3.2, installed: 4.1.1]
     - atomicwrites [required: >=1.0, installed: 1.2.1]
     - attrs [required: >=17.4.0, installed: 18.2.0]
