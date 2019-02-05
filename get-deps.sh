@@ -35,7 +35,8 @@ docker run --name python_bash -v ${PWD}/dependencies/${working_dir}:/tmp/depende
 
 ## get installed dependencies on top of base
 diff ${PWD}/dependencies/base/system_deps.txt ${PWD}/dependencies/${working_dir}/system_deps.txt | perl -lne 'if(/^[<>]/){s/^..//g;print}' > ${PWD}/dependencies/${working_dir}/system_deps_diff.txt
-diff ${PWD}/dependencies/base/system_deps.csv ${PWD}/dependencies/${working_dir}/system_deps.csv perl -lne 'if(/^[<>]/){s/^..//g;print}' > ${PWD}/dependencies/${working_dir}/system_deps_diff.csv
+echo "package, version" > ${PWD}/dependencies/${working_dir}/system_deps_diff.csv
+diff ${PWD}/dependencies/base/system_deps.csv ${PWD}/dependencies/${working_dir}/system_deps.csv perl -lne 'if(/^[<>]/){s/^..//g;print}' >> ${PWD}/dependencies/${working_dir}/system_deps_diff.csv
 diff ${PWD}/dependencies/base/lib_deps.txt ${PWD}/dependencies/${working_dir}/lib_deps.txt perl -lne 'if(/^[<>]/){s/^..//g;print}' > ${PWD}/dependencies/${working_dir}/lib_deps_diff.txt
 
 # DEVELOPER.SKA.TELESCOPE ---------------------------------------------------------------------------------------------------------------------------------
@@ -58,5 +59,6 @@ docker run --name python_bash -v ${PWD}/dependencies/${working_dir}:/tmp/depende
 
 ## get installed dependencies on top of base
 diff ${PWD}/dependencies/base/system_deps.txt ${PWD}/dependencies/${working_dir}/system_deps.txt | perl -lne 'if(/^[<>]/){s/^..//g;print}' > ${PWD}/dependencies/${working_dir}/system_deps_diff.txt
-diff ${PWD}/dependencies/base/system_deps.csv ${PWD}/dependencies/${working_dir}/system_deps.csv perl -lne 'if(/^[<>]/){s/^..//g;print}' > ${PWD}/dependencies/${working_dir}/system_deps_diff.csv
+echo "package, version" > ${PWD}/dependencies/${working_dir}/system_deps_diff.csv
+diff ${PWD}/dependencies/base/system_deps.csv ${PWD}/dependencies/${working_dir}/system_deps.csv perl -lne 'if(/^[<>]/){s/^..//g;print}' >> ${PWD}/dependencies/${working_dir}/system_deps_diff.csv
 diff ${PWD}/dependencies/base/lib_deps.txt ${PWD}/dependencies/${working_dir}/lib_deps.txt perl -lne 'if(/^[<>]/){s/^..//g;print}' > ${PWD}/dependencies/${working_dir}/lib_deps_diff.txt
